@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const TourModel = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 
 exports.getCheckOutSessions =catchAsync(async(req,res) => {
     // 1) Get the currently booked tour
