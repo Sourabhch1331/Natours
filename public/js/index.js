@@ -13,6 +13,7 @@ const bookBtn = document.getElementById('book-tour');
 if(passwordDataForm){
     passwordDataForm.addEventListener('submit',async (e)=>{
         e.preventDefault();
+        console.log('loggedin');
         document.querySelector('.btn--save-password').textContent='Updating...';
         const password = document.getElementById('password-current').value;
         const newPassword = document.getElementById('password').value;
@@ -56,6 +57,7 @@ if(loginForm){
         const password = document.getElementById('password').value;
     
         login(email,password);
+        return false;
     });
 }
 
