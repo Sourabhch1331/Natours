@@ -53,10 +53,12 @@ if(userDataForm){
 if(loginForm){
     loginForm.addEventListener('submit', (e)=>{
         e.preventDefault();
+        e.target.textContent ='LOGING IN...'
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
     
         login(email,password);
+        e.target.textContent ='LOG IN'
         return false;
     });
 }
