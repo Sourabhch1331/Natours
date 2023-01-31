@@ -494,11 +494,9 @@ if (userDataForm) userDataForm.addEventListener('submit', (e)=>{
 });
 if (loginForm) loginForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    e.target.textContent = 'LOGING IN...';
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     _login.login(email, password);
-    e.target.textContent = 'LOG IN';
     return false;
 });
 if (logOutBtn) logOutBtn.addEventListener('click', _login.logout);
